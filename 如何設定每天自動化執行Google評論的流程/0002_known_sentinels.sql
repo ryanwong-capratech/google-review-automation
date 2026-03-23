@@ -1,0 +1,1 @@
+ALTER TABLE `businesses` ADD `industry` varchar(100) DEFAULT 'general';

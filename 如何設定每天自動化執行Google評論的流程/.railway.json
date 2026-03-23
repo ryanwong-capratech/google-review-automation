@@ -1,0 +1,25 @@
+{
+  "build": {
+    "builder": "nixpacks",
+    "nixpacks": {
+      "providers": ["nodejs", "pnpm"],
+      "packages": [
+        "chromium",
+        "libxss1",
+        "libappindicator3-1",
+        "libindicator7",
+        "libgconf-2-4",
+        "libxext6",
+        "libxrender-dev",
+        "xvfb"
+      ],
+      "buildCommands": [
+        "pnpm install",
+        "pnpm build"
+      ]
+    }
+  },
+  "deploy": {
+    "startCommand": "npm run start"
+  }
+}
